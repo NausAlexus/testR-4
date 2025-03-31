@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        MatchActionZone - Master Rummy with Skillful Strategies and Expertise
+    </title>
+    <meta name="description"
+          content="Welcome to MatchActionZone, where your strategic prowess and clever tactics shine the brightest! Engage in exhilarating Rummy matches that emphasize skill over luck. Become a part of our vibrant player community, sharpen your skills, and enjoy spirited competitions. Dive deep into the fascinating world of Rummy and enrich your gaming experience with MatchActionZone today!"
+    />
+    <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css" />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="burgerMenu.js" defer></script>
+    <script src="tel.js" defer></script>
+    <script src="popUp.js" defer></script>
+    <script src="readMore.js" defer></script>
+    <script src="info.js" defer></script>
+    <script src="review.js" defer></script>
+
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navigation">
+            <a class="header-link" href="/">MatchActionZone</a>
+            <div class="burger-menu" id="burgerMenu">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+            <ul class="nav-list" id="navList">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-hover" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-hover" href="about/">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-hover" href="faq/">FAQ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-hover" href="how-to-play/">How to play</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-hover" href="tournaments/">Tournaments</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-hover" href="contacts/">Contacts</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-overlay">
+                <h1 class="hero-title">Embark on an Exciting Adventure!</h1>
+                <p class="hero-subtitle">
+                    Welcome to MatchActionZone, where the captivating world of Rummy collides with the exhilaration of friendly rivalry and strategic gameplay! Dive in and experience the ultimate fusion of fun and competition!
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <form action="thanks_form.php" method="post" id="register" class="hero__form">
+                <label for="phoneInput" class="hero__label">Phone Number</label>
+                <input name="phone" type="tel" placeholder="Enter your phone number" id="phoneInput" required>
+            
+                
+                <div class="hero-flex-cont">
+                    <input type="checkbox" name="checkbox" id="saw" required>
+                    <label for="saw" class="hero__note">
+                        I agree to the 
+                        <a class="priv-btn-link" href="privacy-policy/">Privacy &amp; Policy</a>.
+                    </label>
+                </div>
+                <button type="submit" id="registerBtn" class="btn-hero" >Get OTP</button>
+            </form>
+        </section>
+        
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-details">
+                <a class="footer-brand" href="/">MatchActionZone</a>
+            </div>
+            <div class="footer-links">
+                <a href="privacy-policy/">Privacy Policy</a>
+                <a href="terms-conditions/">Terms And Conditions</a>
+                <a href="responsible-gaming/">Responsible Gaming</a>
+            </div>
+            <div class="gam" >
+                <div class="cirle" >18+</div>
+                <a href="https://www.gamcare.org.uk/" target="_blank"><img class="img18" src="img/ga-care.png" alt="img" ></a>
+            </div>
+        </div>
+        <p class="warn-18">This game is for 18+ players only. Play responsibly.</p>
+        <p class="warn-states">Rummy is a game of skill and is legal under the Supreme Court of India’s ruling. No real-money gambling is involved. 
+            States where gambling is prohibited: Andhra Pradesh, Assam, Nagaland, Odisha, Sikkim, and Telangana</p>
+        <p class="footer-rights">&copy; 2025 MatchActionZone. All rights reserved.</p>
+    </footer>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopupButton">&times;</span>
+            <h2>Important Notice</h2>
+            <p>Play responsibly and stay in control! Our website is only for users aged 18 and above. Enjoy the game wisely and prioritize your well-being.</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
