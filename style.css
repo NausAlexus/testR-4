@@ -856,6 +856,95 @@ input[type="tel"]:focus {
     }
 }
 
+.rummy-section {
+    width: 100%; /* Занимает всю ширину экрана */
+    padding: 40px;
+    border-radius: 0; /* Без закругленных углов для полноэкранного стиля */
+    color: #000000;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Пробел между кнопками */
+    margin-bottom: 30px;
+}
+
+.rummy-button {
+    padding: 15px 30px; /* Измененный отступ */
+    color: #ffffff;
+    background: rgba(204, 0, 0, 0.647); /* Полупрозрачный белый фон */
+    border: none; 
+    border-radius: 25px; /* Овальная форма */
+    font-size: 18px; /* Увеличенный размер шрифта */
+    cursor: pointer; /* Указатель для кликуемого элемента */
+    transition: all 0.3s ease; /* Плавный переход */
+    font-weight: bold; /* Жирный текст */
+}
+
+.rummy-button.active {
+    background-color: rgba(217, 69, 69, 0.504); /* Новая активная кнопка */
+}
+
+.content-block {
+    display: none;
+    margin-top: 30px;
+    text-align: left;
+    background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Легкая тень */
+}
+
+.content-block.active {
+    display: block;
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px; /* Максимальный размер изображения */
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px; /* Пробел под изображением */
+}
+
+.rummy-section h3 {
+    font-size: 32px; /* Увеличенный размер заголовка */
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Тень текста */
+}
+
+.rummy-section p {
+    font-size: 18px; /* Увеличенный размер текста */
+    line-height: 1.6; /* Увеличенный интервал между строками */
+}
+
+.rummy-section ul {
+    margin-left: 20px;
+    list-style-type: disc; /* Изменён тип маркеров */
+    padding-left: 10px; /* Отступ слева */
+    color: #333; /* Цвет текста для списка */
+}
+
+@media (max-width: 768px) {
+    .button-group {
+        flex-direction: column;
+        gap: 10px; /* Пробел между кнопками в столбик */
+    }
+
+    .content-block {
+        padding: 20px; /* Уменьшенные отступы на мобильных устройствах */
+    }
+
+    .content-image {
+        max-height: 250px; /* Меньший максимальный размер изображений на мобильниках */
+    }
+
+    .rummy-button {
+        width: 100%; /* Ширина кнопок на мобильных */
+    }
+}
 
 
 
@@ -909,5 +998,9 @@ input[type="tel"]:focus {
         background: linear-gradient(45deg, #69000e, #ad4949);
         transform: translateY(-3px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+    .rummy-button:hover {
+        background: rgba(217, 69, 69, 0.504); /* Подсветка фона при наведении */
+        transform: scale(1.05); /* Увеличение кнопки при наведении */
     }
 }
