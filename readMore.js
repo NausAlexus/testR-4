@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const button = document.querySelector(".rummyInfinity-online-button");
+    const button = document.querySelector(".rummyInfo-online-button");
     const additionalParagraphs = document.querySelector(".additionalInfinity-paragraphs");
 
     // Изначально скрываем дополнительные параграфы
