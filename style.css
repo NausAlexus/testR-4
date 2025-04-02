@@ -1071,9 +1071,67 @@ input[type="tel"]:focus {
 
 
 
+.terms-content, .privacy-content, .responsible-game-content{
+    padding: 20px;
+}
 
+.terms-title, .privacy-title, .gaming-title {
+    font-size: 2.5em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 120px;
+}
 
+.terms-intro, .privacy-intro, .gaming-intro {
+    font-size: 1.2em;
+    color: #373737;
+    text-align: center;
+    margin-bottom: 30px;
+}
 
+.privacy-policy-section-title, .terms-and-conditions-section-title, .responsible-gaming-section-title {
+    font-size: 1.8em;
+    margin: 30px 0 10px;
+    color: #7a1010; /* Green color for section titles */
+}
+
+.privacy-policy-section-description, .terms-and-conditions-section-description, .responsible-gaming-section-description {
+    font-size: 1em;
+    color: #373737;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.privacy-policy-info-list, .terms-and-conditions-prohibited-activities, .responsible-gaming-gaming-guidelines {
+    list-style-type: none; /* Removes default list style */
+    padding-left: 0; /* Removes left padding */
+}
+
+.privacy-policy-info-item, .terms-and-conditions-prohibited-item, .responsible-gaming-guideline-item {
+    background: #e7e786;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .terms-title, .privacy-title, .gaming-title {
+        font-size: 2em;
+    }
+
+    .terms-intro, .privacy-intro, .gaming-intro, 
+    .privacy-policy-section-title, .terms-and-conditions-section-title, .responsible-gaming-section-title {
+        font-size: 1.5em;
+    }
+
+    .privacy-policy-section-description, .terms-and-conditions-section-description, .responsible-gaming-section-description {
+        font-size: 0.9em;
+    }
+}
 
 
 
@@ -1122,5 +1180,9 @@ input[type="tel"]:focus {
     .match-action-card:hover {
         transform: translateY(-5px) scale(1.02); /* Slight lift and scale on hover */
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deep shadow effect on hover */
+    }
+    .privacy-policy-info-item:hover, .terms-and-conditions-prohibited-item:hover, .responsible-gaming-guideline-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
     }
 }
