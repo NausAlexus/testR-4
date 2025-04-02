@@ -927,7 +927,7 @@ input[type="tel"]:focus {
     color: #333; /* Цвет текста для списка */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1030px) {
     .button-group {
         flex-direction: column;
         gap: 10px; /* Пробел между кнопками в столбик */
@@ -945,6 +945,122 @@ input[type="tel"]:focus {
         width: 100%; /* Ширина кнопок на мобильных */
     }
 }
+
+.reviews-section {
+    text-align: center;
+    margin: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.reviews-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #920e0e;
+}
+
+.reviews-slider {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.reviews-slide {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.reviews-slide.reviews-active {
+    opacity: 1;
+}
+
+.review-image {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.reviewer-name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.review-text {
+    font-size: 1.2em;
+    line-height: 1.5;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .reviews-title {
+        font-size: 1.5em;
+    }
+
+    .review-text {
+        font-size: 1em;
+    }
+
+    .review-image {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.match-action-card-section {
+    display: flex;                 /* Use Flexbox for layout */
+    flex-wrap: wrap;             /* Allow the cards to wrap */
+    justify-content: center;      /* Center cards horizontally */
+    gap: 20px;                   /* Space between cards */
+    padding: 20px;               /* Optional padding around the section */
+}
+
+.match-action-card {
+    background-color: white;      /* Background color of card */
+    border-radius: 15px;         /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth transition effects */
+    width: calc(33.33% - 20px);  /* 3 cards per row with gap adjustment */
+    max-width: 400px;            /* Maximum width for larger screens */
+    overflow: hidden;            /* Ensures content doesn't overflow */
+    position: relative;           /* Position context for child elements */
+    padding: 10px;
+}
+
+.match-action-card-title {
+    font-size: 1.5em;            /* Title font size */
+    color: #333;                 /* Title color */
+    margin: 20px 0;             /* Margin around title */
+    text-align: center;          /* Center the title */
+}
+
+.match-action-card-content {
+    padding: 20px;               /* Padding for content */
+    text-align: center;          /* Center text */
+}
+
+.match-action-card-icon {
+    font-size: 40px;             /* Icon size */
+    color: #af0c58;              /* Icon color */
+}
+
+.match-action-card-text {
+    font-size: 1em;              /* Text font size */
+    color: #666;                 /* Text color */
+    line-height: 1.5;            /* Line height for readability */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .match-action-card {
+        width: calc(100% - 20px); /* Full width for smaller screens */
+    }
+}
+
 
 
 
@@ -1002,5 +1118,9 @@ input[type="tel"]:focus {
     .rummy-button:hover {
         background: rgba(217, 69, 69, 0.504); /* Подсветка фона при наведении */
         transform: scale(1.05); /* Увеличение кнопки при наведении */
+    }
+    .match-action-card:hover {
+        transform: translateY(-5px) scale(1.02); /* Slight lift and scale on hover */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Deep shadow effect on hover */
     }
 }

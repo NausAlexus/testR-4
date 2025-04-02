@@ -1,26 +1,18 @@
-let index = 0;
+let currentIndex2 = 0;
+const slides2 = document.querySelectorAll('.reviews-slide');
 
-function showReview() {
-    const slider = document.getElementById('slider');
-    const totalReviews = document.querySelectorAll('.review').length;
-
-    slider.style.transform = `translateX(${-index * 100}%)`; // No inline styles
+function showSlide(index) {
+    slides2.forEach((slide, i) => {
+        slide.classList.remove('reviews-active');
+        if (i === index) {
+            slide.classList.add('reviews-active');
+        }
+    });
 }
 
-function nextReview() {
-    const totalReviews = document.querySelectorAll('.review').length;
-    index = (index + 1) % totalReviews;
-    showReview();
+function nextSlide() {
+    currentIndex2 = (currentIndex2 + 1) % slides2.length;
+    showSlide(currentIndex2);
 }
 
-function prevReview() {
-    const totalReviews = document.querySelectorAll('.review').length;
-    index = (index - 1 + totalReviews) % totalReviews;
-    showReview();
-}
-
-// Event Listeners for buttons
-document.getElementById('nextButton').addEventListener('click', nextReview);
-document.getElementById('prevButton').addEventListener('click', prevReview);
-
-showReview();
+setInterval(nextSlide, 3000);
