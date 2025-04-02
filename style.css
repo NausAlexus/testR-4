@@ -1061,16 +1061,6 @@ input[type="tel"]:focus {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 .terms-content, .privacy-content, .responsible-game-content{
     padding: 20px;
 }
@@ -1132,6 +1122,86 @@ input[type="tel"]:focus {
         font-size: 0.9em;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.faq-section {
+    max-width: 800px;
+    margin: 30px auto; /* Увеличено расстояние сверху и снизу */
+    border-radius: 15px; /* Увеличены углы для более плавного вида */
+    background: linear-gradient(135deg, rgba(248, 248, 248, 0.9), rgba(255, 255, 255, 0.7)); /* Градиентный фон */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Более резкий эффект тени */
+    padding: 30px; /* Увеличен внутренний отступ */
+    backdrop-filter: blur(10px); /* Размытие фона */
+    margin-top: 80px;
+}
+
+.faq-title {
+    font-size: 3em; /* Увеличен размер шрифта */
+    margin-bottom: 20px;
+    text-align: center;
+    color: #6d0210; /* Яркий желтый цвет для заголовка */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Тень для текста */
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Разделитель с очень легким цветом */
+    padding: 20px 0; /* Увеличены отступы */
+    transition: background 0.3s ease, transform 0.3s ease; /* Плавный переход фона и трансформации */
+    perspective: 1000px; /* Перспектива для 3D-эффекта */
+}
+
+.faq-item:hover {
+    background: rgba(255, 255, 255, 0.2); /* Легкая прозрачность при наведении */
+    transform: translateY(-5px) scale(1.02); /* Подъем элемента при наведении */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Эффект тени при наведении */
+}
+
+.faq-question {
+    font-size: 1.6em; /* Увеличенный размер шрифта для вопросов */
+    color: #6200ea; /* Индиго для заголовков вопросов */
+    cursor: pointer;
+    margin: 0;
+    transition: color 0.3s ease; /* Плавный переход цвета */
+}
+
+.faq-question:hover {
+    color: #3700b3; /* Цвет при наведении */
+}
+
+.faq-answer {
+    display: none; /* Скрытие ответа по умолчанию */
+    font-size: 1.2em; /* Размер шрифта для ответов */
+    color: #333; /* Тёмно-серый цвет текста для удобочитаемости */
+    margin-top: 10px;
+    transition: all 0.5s ease; /* Плавный переход анимации */
+    padding-left: 20px; /* Отступ слева для ответов */
+    transform: translateX(20px); /* Эффект сдвига */
+    opacity: 0; /* Сделаем ответ невидимым */
+}
+
+/* Стиль для видимого ответа */
+.faq-answer.active {
+    display: block; /* Отображаем ответ */
+    opacity: 1; /* Делаем ответ видимым */
+    transform: translateX(0); /* Убираем сдвиг */
+}
+
+
+
 
 
 
