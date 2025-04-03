@@ -401,7 +401,7 @@ body::-webkit-scrollbar-track {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: url('img/about-bg.jpg');
+    background-image: url('img/hero-about.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -1123,21 +1123,6 @@ input[type="tel"]:focus {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .faq-section {
     max-width: 800px;
     margin: 30px auto; /* Увеличено расстояние сверху и снизу */
@@ -1198,6 +1183,345 @@ input[type="tel"]:focus {
     display: block; /* Отображаем ответ */
     opacity: 1; /* Делаем ответ видимым */
     transform: translateX(0); /* Убираем сдвиг */
+}
+
+.about-rummy {
+    padding: 30px;
+    background-color: #ffffff; /* Change to white for a clean look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for a 3D effect */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.about-rummy__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    animation: fadeIn 0.5s ease; /* Fade-in effect for the container */
+}
+
+.about-rummy__sidebar {
+    flex: 1;
+    margin-right: 30px;
+    margin-top: 60px;
+    perspective: 800px; /* Perspective for 3D effect */
+}
+
+.about-rummy__button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #e63946; /* Change to a vibrant red */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: left;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+}
+
+.about-rummy__button:hover {
+    color: #000;
+    background-color: #d62839; /* Darker red on hover */
+    transform: translateY(-5px) rotateY(5deg); /* Slight lift and rotation for 3D effect */
+}
+
+.about-rummy__button--active {
+    background-color: #e4dd08; /* Active button with a light contrasting color */
+    color: #e63946; /* Text color on the active button */
+    transform: scale(1.05); /* Enlarge active button */
+}
+
+.about-rummy__content {
+    flex: 2;
+    transform-style: preserve-3d; /* Preserve 3D effect */
+    transition: transform 0.5s; /* Smooth transition for content changes */
+}
+
+.about-rummy__title {
+    font-size: 26px;
+    margin-bottom: 20px;
+    color: #1d3557; /* Change title color for contrast */
+}
+
+.about-rummy__text {
+    display: none; /* Hidden by default, managed by JavaScript */
+}
+
+.about-rummy__text#mission {
+    display: block; /* Show this section by default */
+    animation: slideIn 0.5s ease; /* Slide-in effect for text */
+}
+
+.about-rummy__button-container {
+    margin-top: 25px;
+}
+
+.about-rummy__contact-button {
+    padding: 12px 25px;
+    background-color: #457b9d; /* Cool teal color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-rummy__contact-button:hover {
+    background-color: #1d3557; /* Darken contact button on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+.about-rummy__image {
+    max-width: 100%; /* Prevents the image from exceeding the width of its container */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Ensures there are no small spaces below the image */
+    margin: 0 auto; /* Centers the image */
+    transform: scale(1.05); /* Slight 3D scale effect */
+    transition: transform 0.3s ease;
+}
+
+.about-rummy__image:hover {
+    transform: scale(1.1); /* Scale image on hover for a nice effect */
+}
+
+@media (max-width: 730px) {
+    .about-rummy__container {
+        flex-direction: column;
+    }
+
+    .about-rummy__sidebar {
+        margin-right: 0;
+        margin-bottom: 20px;
+        margin-top: 0;
+    }
+
+    .header-link {
+        font-size: 20px; /* Increase size for better readability */
+    }
+
+    .RummyStrategyHub-online-title {
+        font-size: 2rem; /* Increase title size for mobile */
+    }
+
+    .RummyStrategyHub-info-section {
+        margin: 0;
+    }
+}
+
+.how-play-content {
+    margin-top: 60px;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.rummy-features {
+    padding: 40px;
+    border-radius: 12px; /* Round edges */
+    max-width: 1200px; /* Ensure the section doesn't stretch too wide */
+    margin: 0 auto; /* Center the section */
+    perspective: 1000px; /* Perspective for child elements */
+}
+
+.rummy-features__title {
+    font-size: 32px;
+    color: #333; /* Dark color for contrast */
+    text-align: center; /* Centered title */
+    margin-bottom: 30px;
+    transform: translateZ(50px); /* Bring title closer for a 3D effect */
+    transition: transform 0.3s ease; 
+}
+
+.rummy-features__list {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.rummy-features__item {
+    background-color: #ffffff; /* White background for each item */
+    border-radius: 8px; /* Rounded borders */
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-bottom: 20px; /* Space between items */
+    padding: 20px; /* Inner padding */
+    display: flex; /* Flex layout for icon and text */
+    flex-direction: column; /* Stack icon and text on smaller screens */
+    align-items: flex-start; /* Left align items */
+    transform: translateZ(0); /* Reset transform for perspective */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+.rummy-features__item:hover {
+    transform: translateY(-5px) translateZ(20px); /* Lift effect on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.rummy-features__icon {
+    font-size: 2rem; /* Icon size */
+    color: #E63946; /* A vibrant color for icons */
+    margin-right: 15px; /* Space between icon and text */
+}
+
+.rummy-features__content {
+    flex: 1; /* Allow content to fill remaining space */
+}
+
+.rummy-features__content strong {
+    display: block; /* Strong text as a block */
+    font-size: 1.2rem; /* Increase size for emphasis */
+    margin-bottom: 5px; /* Space below strong text */
+    color: #1d3557; /* Darker color for better readability */
+}
+
+@media (max-width: 768px) {
+    .rummy-features__item {
+        flex-direction: column; /* Stack icon and text on smaller screens */
+        align-items: flex-start; /* Left align items */
+    }
+
+    .rummy-features__icon {
+        margin-bottom: 10px; /* Space below icon for stacked items */
+        font-size: 1.5rem; /* Smaller icon size on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .rummy-features {
+        padding: 20px; /* Less padding on mobile */
+    }
+
+    .rummy-features__title {
+        font-size: 24px; /* Smaller title on mobile */
+    }
+
+    .rummy-features__item {
+        padding: 15px; /* Less padding in items on mobile */
+    }
+}
+
+.about-rummy__image{
+    border-radius: 30px;
+}
+.how-to-play-content{
+    margin-top: 100px;
+}
+.advantages-section {
+    padding: 40px;
+    background-color: #f0f4f8; /* Light background */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+    max-width: 1200px; /* Limit max width */
+    margin: 0 auto; /* Center the section */
+    margin-top: 60px;
+}
+
+.advantages-title {
+    font-size: 2.5rem;
+    color: #23395d; /* Dark blue */
+    text-align: center; /* Centered title */
+    margin-bottom: 30px;
+    transform: translateZ(40px); /* 3D effect */
+    transition: color 0.3s ease;
+}
+
+.advantage-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px; /* Space between blocks */
+    perspective: 1000px; /* Perspective for 3D effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+}
+
+.advantage-block:hover {
+    transform: translateY(-5px) rotateY(5deg); /* Slight lift and tilt on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+.advantage-text {
+    flex: 1;
+    padding: 20px; /* Space around text */
+    background-color: #ffffff; /* White background for text box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Subtle shadow */
+}
+
+.advantage-description {
+    font-size: 1.1rem; /* Slightly larger text */
+    color: #555; /* Dark gray */
+    margin-bottom: 15px; /* Space between text and button */
+}
+
+.btn-vacancies {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2b7a78; /* Teal button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+.btn-vacancies:hover {
+    background-color: #1f5a57; /* Darker teal on hover */
+    transform: scale(1.05); /* Slight enlargement */
+}
+
+.advantage-image {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for images */
+}
+
+/* Styles for reverse layout */
+.revers-text {
+    flex-direction: row-reverse; /* Reverse column order */
+}
+
+@media (max-width: 768px) {
+    .advantages-section {
+        padding: 20px; /* Less padding on mobile */
+    }
+
+    .advantages-title {
+        font-size: 2rem; /* Smaller title on mobile */
+    }
+
+    .advantage-block {
+        flex-direction: column; /* Stack elements on mobile */
+        align-items: flex-start; /* Align left in mobile view */
+    }
+
+    .advantage-text {
+        width: 100%; /* Text takes full width on mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .btn-vacancies {
+        padding: 8px 16px; /* Smaller button on mobile */
+    }
 }
 
 
